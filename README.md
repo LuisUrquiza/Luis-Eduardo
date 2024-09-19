@@ -1,30 +1,44 @@
-# Compilación de funciones de matemáticas financieras
+#Se presentan las fórmulas de interés simple
+#Autor: Luis Eduardo Urquiza Hernández
+# V 1.0: 19 de septiembre del 2024
 
-En este repositorio, se agrupan las funciones y actividades informáticas realizadas en la materia de matemáticas financieras d ela licentiatura de Actuaría y Ciencia de Datos de la UMSNH.
+# Function para calcular Valor Presente
+ValorActualSimple = function(Valorfinalsimple, Interes, time) {
+  aSalida = Valorfinalsimple / (1 + Interes * time)
+  return(aSalida)
+}
 
-## Funciones de interés simple
+# Function para calcular Interes
+interes = function(Valorfinalsimple, ValorActualSimple, time) {
+  zSalida = (Valorfinalsimple / ValorActualSimple - 1) / time
+  return(zSalida)
+}
 
-Con el siguiente código, puede usted cargar las funciones relativas a los cálculos de interés simple:
+# Function to para calcular Time (plazo del préstamo)
+tiempo = function(Valorfinalsimple, ValorActualSimple, Interes) {
+  ySalida = (Valorfinalsimple / ValorActualSimple - 1) / Interes
+  return(ySalida)
+}
 
-```{r}
-source("https://raw.githubusercontent.com/LuisUrquiza/Luis-Eduardo/refs/heads/main/formulasInteresSimple.R")
-```{r}
-A continuación se dan ejemplos del uso de las fórmulas vorrespondientes
+# Function para calcular valor futuro 
+ValorFinalSimple = function(ValorActualSimple, Interes, time) {
+  xSalida = ValorActualSimple * (1 + Interes * time)
+  return(xSalida)
+}
 
-### Cálculo del Valor Futuro
+# Problema de José Ignacio
+ValorActualSimple = 1000
+Interes = 0.02
+time = 7/12  # Convert 7 months to years (since interest rate is annual)
 
-Para ilustrar el ejemplo, se tiene el siguiente ejercicio:
-$VA$=$1,000.00
-$i$=24.00% anualizado
-$r$=2.00% mensual
-$t$=7 meses
+# Calculate Valor Futuro
+ValorFinalSimple_result = ValorFinalSimple(ValorActualSimple, Interes, time)
+print(paste("Valor Final Simple:", ValorFinalSimple_result))
 
-Se realizan los cálculos
-```{r}
-#Creamos objetos con los valores de entrada:
-valorActualsimple=1000
-interes=0.02
-time=7
+# Calculate Interes
+interes_result = interes(ValorFinalSimple_result, ValorActualSimple, time)
+print(paste("Interes:", interes_result))
 
-
+# Calculate Tiempo
+print(paste("Tiempo (months):", 7))
 ```
