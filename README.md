@@ -17,7 +17,7 @@ interes = function(Valorfinalsimple, ValorActualSimple, time) {
   zSalida = (Valorfinalsimple / ValorActualSimple - 1) / time
   return(zSalida)
 }
-```
+```{r}
 ## Funcion to para calcular Time (plazo del préstamo)
 tiempo = function(Valorfinalsimple, ValorActualSimple, Interes) {
   ySalida = (Valorfinalsimple / ValorActualSimple - 1) / Interes
@@ -29,20 +29,20 @@ ValorFinalSimple = function(ValorActualSimple, Interes, time) {
   xSalida = ValorActualSimple * (1 + Interes * time)
   return(xSalida)
 }
-```
+```{r}
 ## Problema de José Ignacio
 ValorActualSimple = 1000
 Interes = 0.02
 time = 7/12  # Convert 7 months to years (since interest rate is annual)
-
+```{r}
 ## Calcular Valor Futuro
 ValorFinalSimple_result = ValorFinalSimple(ValorActualSimple, Interes, time)
 print(paste("Valor Final Simple:", ValorFinalSimple_result))
-
+```{r}
 ## Calcular Interes
 interes_result = interes(ValorFinalSimple_result, ValorActualSimple, time)```
 print(paste("Interes:", interes_result))
-
+```{r}
 ## Calcular Tiempo
 print(paste("Tiempo (months):", 7))
 ```
