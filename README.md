@@ -1,39 +1,11 @@
-# Luis-Eduardo
-#Se presentan las fórmulas de interés simple
-#Autor: Luis Eduardo Urquiza Hernández
-# V 1.0: 19 de septiembre del 2024
+# Compilación de funciones de matemáticas financieras
 
-# VA function
-valorActualSimple = function(VF, rate, time) {
-  aSalida = VF / (1 + rate * time)
-  return(aSalida)
-}
+En este repositorio, se agrupan las funciones y actividades informáticas realizadas en la materia de matemáticas financieras d ela licentiatura de Actuaría y Ciencia de Datos de la UMSNH.
 
-# Interés function
-Interes = function(VF, VA, time) {
-  zSalida = (VF / VA - 1) / time
-  return(zSalida)
-}
+## Funciones de interés simple
 
-# time function
-time = function(VF, VA, rate) {
-  ySalida = (VF / VP - 1) / rate
-  return(ySalida)
-}
+Con el siguiente código, puede usted cargar las funciones relativas a los cálculos de interés simple:
 
-# VF function
-Valorfinalsimple = function(VA, rate, time) {
-  xSalida = VP*(1 + rate * time)
-  return(xSalida)
-}
-# Problema de José Ignacio
-Valorfinalsimple(1000,0.02,7)
-
-
-VF_result = Valorfinalsimple(principal, rate, time)
-print(VF_result)
-
-
-
-VF_result = Valorfinalsimple(principal, rate, time)
-print(VF_result)
+```{r}
+source("https://raw.githubusercontent.com/LuisUrquiza/Luis-Eduardo/refs/heads/main/formulasInteresSimple.R")
+```
