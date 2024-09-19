@@ -1,6 +1,7 @@
-#Se presentan las fórmulas de interés simple
+`#Se presentan las fórmulas de interés simple
 #Autor: Luis Eduardo Urquiza Hernández
 # V 1.0: 19 de septiembre del 2024
+
 
 ## Funcion para calcular Valor Presente
 ValorActualSimple = function(Valorfinalsimple, Interes, time) {
@@ -36,7 +37,7 @@ ValorFinalSimple_result = ValorFinalSimple(ValorActualSimple, Interes, time)
 print(paste("Valor Final Simple:", ValorFinalSimple_result))
 
 ## Calcular Interes
-interes_result = interes(ValorFinalSimple_result, ValorActualSimple, time)
+interes_result = interes(ValorFinalSimple_result, ValorActualSimple, time)```
 print(paste("Interes:", interes_result))
 
 ## Calcular Tiempo
