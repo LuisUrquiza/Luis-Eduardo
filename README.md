@@ -4,32 +4,32 @@
 ```{r}
 source("https://raw.githubusercontent.com/LuisUrquiza/Luis-Eduardo/refs/heads/main/formulasInteresSimple.R")
 
-
+```
 ## Funcion para calcular Valor Presente
 ```{r}
 ValorActualSimple = function(Valorfinalsimple, Interes, time) {
   aSalida = Valorfinalsimple / (1 + Interes * time)
   return(aSalida)
 }
-
+```{r}
 ## Funcion para calcular Interes
 interes = function(Valorfinalsimple, ValorActualSimple, time) {
   zSalida = (Valorfinalsimple / ValorActualSimple - 1) / time
   return(zSalida)
 }
-
+```
 ## Funcion to para calcular Time (plazo del préstamo)
 tiempo = function(Valorfinalsimple, ValorActualSimple, Interes) {
   ySalida = (Valorfinalsimple / ValorActualSimple - 1) / Interes
   return(ySalida)
 }
-
+```{r}
 ## Funcion para calcular valor futuro 
 ValorFinalSimple = function(ValorActualSimple, Interes, time) {
   xSalida = ValorActualSimple * (1 + Interes * time)
   return(xSalida)
 }
-
+```
 ## Problema de José Ignacio
 ValorActualSimple = 1000
 Interes = 0.02
