@@ -1,4 +1,4 @@
-`#Se presentan las fórmulas de interés simple
+#Se presentan las fórmulas de interés simple
 #Autor: Luis Eduardo Urquiza Hernández
 # V 1.0: 19 de septiembre del 2024
 ```{r}
@@ -6,7 +6,7 @@ source("https://raw.githubusercontent.com/LuisUrquiza/Luis-Eduardo/refs/heads/ma
 
 ```
 
-## Funcion para calcular Valor Presente
+### Funcion para calcular Valor Presente
 ValorActualSimple = function(Valorfinalsimple, Interes, time) {
   aSalida = Valorfinalsimple / (1 + Interes * time)
   return(aSalida)
