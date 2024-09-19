@@ -11,7 +11,7 @@ ValorActualSimple = function(Valorfinalsimple, Interes, time) {
   aSalida = Valorfinalsimple / (1 + Interes * time)
   return(aSalida)
 }
-```{r}
+```
 ## Funcion para calcular Interes
 interes = function(Valorfinalsimple, ValorActualSimple, time) {
   zSalida = (Valorfinalsimple / ValorActualSimple - 1) / time
@@ -23,7 +23,7 @@ tiempo = function(Valorfinalsimple, ValorActualSimple, Interes) {
   ySalida = (Valorfinalsimple / ValorActualSimple - 1) / Interes
   return(ySalida)
 }
-```{r}
+```
 ## Funcion para calcular valor futuro 
 ValorFinalSimple = function(ValorActualSimple, Interes, time) {
   xSalida = ValorActualSimple * (1 + Interes * time)
@@ -34,7 +34,7 @@ ValorFinalSimple = function(ValorActualSimple, Interes, time) {
 ValorActualSimple = 1000
 Interes = 0.02
 time = 7/12  # Convert 7 months to years (since interest rate is annual)
-```{r}
+```
 ## Calcular Valor Futuro
 ValorFinalSimple_result = ValorFinalSimple(ValorActualSimple, Interes, time)
 print(paste("Valor Final Simple:", ValorFinalSimple_result))
