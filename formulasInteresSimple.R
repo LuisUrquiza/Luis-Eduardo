@@ -2,38 +2,42 @@
 #Autor: Luis Eduardo Urquiza Hernández
 # V 1.0: 19 de septiembre del 2024
 
-# VA function
-valorActualSimple = function(VF, rate, time) {
-  aSalida = VF / (1 + rate * time)
+# Function to calculate Present Value (Valor Actual Simple)
+ValorActualSimple = function(Valorfinalsimple, Interes, time) {
+  aSalida = Valorfinalsimple / (1 + Interes * time)
   return(aSalida)
 }
 
-# Interés function
-Interes = function(VF, VA, time) {
-  zSalida = (VF / VA - 1) / time
+# Function to calculate Interest Rate (Interes)
+interes = function(Valorfinalsimple, ValorActualSimple, time) {
+  zSalida <- (Valorfinalsimple / ValorActualSimple - 1) / time
   return(zSalida)
 }
 
-# time function
-time = function(VF, VA, rate) {
-  ySalida = (VF / VP - 1) / rate
+# Function to calculate Time (tiempo)
+tiempo = function(Valorfinalsimple, ValorActualSimple, Interes) {
+  ySalida = (Valorfinalsimple / ValorActualSimple - 1) / Interes
   return(ySalida)
 }
 
-# VF function
-Valorfinalsimple = function(VA, rate, time) {
-  xSalida = VP*(1 + rate * time)
+# Function to calculate Future Value (Valor Final Simple)
+ValorFinalSimple = function(ValorActualSimple, Interes, time) {
+  xSalida = ValorActualSimple * (1 + Interes * time)
   return(xSalida)
 }
-# Problema de José Ignacio
-Valorfinalsimple(1000,0.02,7)
 
+# Problem of José Ignacio
+ValorActualSimple = 1000
+Interes = 0.02
+time = 7/12  # Convert 7 months to years (since interest rate is annual)
 
-VF_result = Valorfinalsimple(principal, rate, time)
-print(VF_result)
+# Calculate Future Value
+ValorFinalSimple_result = ValorFinalSimple(ValorActualSimple, Interes, time)
+print(paste("Valor Final Simple:", ValorFinalSimple_result))
 
+# Calculate Interest
+interes_result = interes(ValorFinalSimple_result, ValorActualSimple, time)
+print(paste("Interes:", interes_result))
 
-
-VF_result = Valorfinalsimple(principal, rate, time)
-print(VF_result)
-
+# Calculate Time 
+print(paste("Tiempo (months):", 7))
