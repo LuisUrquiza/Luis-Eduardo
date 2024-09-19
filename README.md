@@ -11,7 +11,7 @@ ValorActualSimple = function(Valorfinalsimple, Interes, time) {
   aSalida = Valorfinalsimple / (1 + Interes * time)
   return(aSalida)
 }
-```{r}
+```
 ## Funcion para calcular Interes
 interes = function(Valorfinalsimple, ValorActualSimple, time) {
   zSalida = (Valorfinalsimple / ValorActualSimple - 1) / time
