@@ -26,7 +26,12 @@ Valorfinalsimple = function(VA, rate, time) {
   return(xSalida)
 }
 # Problema de José Ignacio
-valorfinal
+Valorfinalsimple(1000,0.02,7)
+
+
+VF_result = Valorfinalsimple(principal, rate, time)
+print(VF_result)
+
 
 
 VF_result = Valorfinalsimple(principal, rate, time)
