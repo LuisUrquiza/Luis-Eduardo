@@ -10,7 +10,7 @@ ValorActualSimple = function(Valorfinalsimple, Interes, time) {
 
 # Function to calculate Interest Rate (Interes)
 interes = function(Valorfinalsimple, ValorActualSimple, time) {
-  zSalida <- (Valorfinalsimple / ValorActualSimple - 1) / time
+  zSalida = (Valorfinalsimple / ValorActualSimple - 1) / time
   return(zSalida)
 }
 
